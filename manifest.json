@@ -3,8 +3,8 @@
   "short_name": "MENORA",
   "start_url": "https://www.menora.in",
   "display": "fullscreen",
-  "background_color": "#d3d3d3",
-  "theme_color": "#00643c",
+  "background_color": "#ffffff",
+  "theme_color": "#0080b3",
   "icons": [
     {
       "src": "final icon menora (2).png",
@@ -12,7 +12,7 @@
       "type": "image/png"
     },
     {
-      "src": "https://github.com/menoradotin/MENORA/blob/8900d26b1998c578b2d84d36754d56c82483821f/final%20screen%20menora%20(1).png",
+      "src": "final screen menora (1).png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -20,6 +20,6 @@
   "id": "menora",
   "description": "MENORA/GOSPEL SOCIETY",
   "lang": "en",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "categories": ["education"]
 }
