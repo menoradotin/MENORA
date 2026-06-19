@@ -1,16 +1,15 @@
 [
-  { 
-    "id": 1, 
-    "title": "Tamil Sample Song 1", 
-    "meta": "Menora Tamil Collection", 
-    "genre": "tamil-christian", 
-    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" 
-  },
-  { 
-    "id": 3, 
-    "title": "English Worship Track 1", 
-    "meta": "International Praise Collection", 
-    "genre": "english-christian", 
-    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" 
-  }
+  { id: 1, title: "Tamil Sample Song 1", meta: "Menora Tamil Collection", genre: "tamil-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+      { id: 2, title: "Tamil Sample Song 2", meta: "Menora Tamil Collection", genre: "tamil-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+      { id: 3, title: "Tamil Sample Song 3", meta: "Menora Tamil Collection", genre: "tamil-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+
+      // ENGLISH CHRISTIAN PLAYLIST TRACKS
+      { id: 4, title: "English Worship Track 1", meta: "International Praise Collection", genre: "english-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+      { id: 5, title: "English Worship Track 2", meta: "International Praise Collection", genre: "english-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+      { id: 6, title: "English Worship Track 3", meta: "International Praise Collection", genre: "english-christian", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+
+      // INSTRUMENTAL PLAYLIST TRACKS
+      { id: 7, title: "Instrumental Track 1", meta: "Meditation / Prayer Background", genre: "instrumental", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+      { id: 8, title: "Instrumental Track 2", meta: "Meditation / Prayer Background", genre: "instrumental", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+      { id: 9, title: "Instrumental Track 3", meta: "Meditation / Prayer Background", genre: "instrumental", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" }
 ]
