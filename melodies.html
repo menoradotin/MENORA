@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Menora Melodies</title>
+  <meta name="description" content="Sing psalms, hymns and make music to the Lord in your hearts (Ephesians 5:19). Stream your favorite Tamil and English worship playlists on Menora Melodies.">
+</head>
+<body style="margin:0; padding:0;">
+
+  <div class="menora-outer-clear-wrap" style="clear: both; display: block; overflow: hidden; margin: 0; padding: 0; width: 100%;">
+    
+    <div style="display:none;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwdmDgoq2gih9wDau88iLvgk5RI41VOgsaBRyBZgNLaIZ620x7sWzvI4wjFqzyTYUkSMoqgI1IgaPILAHwlQI-ae6dyBvTEEz2s8BIk_MNzjZcVh7czxkdNLlHXmk8ExZ-ABfhrS1aeWb6K06QZcaNYZ6vaFxCeZP5EqqPqyL_QWyCVVZ3KyQWCcaWrs8/s400/Untitled%20design.png" alt="MENORA MELODIES">
+    </div>
+
+    <div id="menoraAudioScope">
+      <div class="menora-player-box">
+        
+        <div class="menora-top-bar">
+          <div class="menora-header-left-group">
+            <div class="menora-widget-brand">MENORA MELODIES</div>
+            <div class="menora-meta-area">
+              <span class="menora-tag" id="menoraScopeNowPlayingTag">NOW PLAYING</span>
+              <div class="menora-track-title" id="menoraScopeTitle">Select a song to begin...</div>
+            </div>
+          </div>
+          <div class="menora-header-right-actions">
+            <a class="menora-home-link-btn" href="https://www.menora.in"><b>HOME</b></a>
+            <button class="menora-search-trigger-btn" id="menoraScopeSearchBtn" aria-label="Search Songs"><b>SEARCH</b></button>
+            <button class="menora-share-action-btn" id="menoraScopeShare" aria-label="Share Playlist"><b>SHARE</b></button>
+          </div>
+        </div>
+
+        <audio id="menoraScopeEngine" preload="metadata"></audio>
+
+        <div class="menora-controls-row">
+          <div class="menora-progress-wrapper">
+            <span class="menora-time-display" id="menoraScopeCurrentTime">0:00</span>
+            <div class="menora-slider-container">
+              <input class="menora-scrub-bar" id="menoraScopeBar" value="0" min="0" max="100" type="range" />
+            </div>
+            <span class="menora-time-display" id="menoraScopeDuration">0:00</span>
+          </div>
+          
+          <div class="menora-media-keys-group">
+            <button class="menora-action-btn menora-skip-btn" id="menoraScopePrev"><b>PREV</b></button>
+            <button class="menora-action-btn" id="menoraScopePlayPause"><b>PLAY</b></button>
+            <button class="menora-action-btn menora-skip-btn" id="menoraScopeNext"><b>NEXT</b></button>
+          </div>
+        </div>
+
+        <div class="menora-filter-strip">
+          <div class="lang-toggle">
+            <button type="button" id="menoraScopeBtnTamil" aria-pressed="true">TAMIL</button>
+            <button type="button" id="menoraScopeBtnEnglish" aria-pressed="false">ENGLISH</button>
+          </div>
+
+          <h4 class="menora-filter-heading">SELECT PLAYLIST</h4>
+          <button type="button" class="menora-custom-select menora-playlist-select-btn" id="menoraScopeSelectBtn">
+            <span id="menoraScopeSelectedLabel">Select Playlist</span>
+            <span class="menora-select-caret">&#9662;</span>
+          </button>
+        </div>
+
+        <div class="menora-queue-panel">
+          <div class="menora-queue-header-row">
+            <div class="menora-queue-title">Songs in Playlist</div>
+            <button type="button" id="menoraViewLyricsBtn" class="menora-view-lyrics-btn" style="display:none;">VIEW LYRICS</button>
+          </div>
+          <div class="menora-queue-scroller" id="menoraScopeMiniList"></div>
+
+          <div id="menoraLyricsOverlay">
+            <div class="menoraLyrics-header">
+              <span id="menoraLyricsHeaderTitle">LYRICS</span>
+              <button id="menoraLyricsCloseBtn" aria-label="Close Lyrics">&times;</button>
+            </div>
+            <div class="menoraLyrics-tabStrip" id="menoraLyricsTabStrip"></div>
+            <div class="menoraLyrics-body" id="menoraLyricsBodyScroll">
+              <div class="menoraLyrics-songTitle" id="menoraLyricsSongTitle">&nbsp;</div>
+              <div class="menoraLyrics-songText" id="menoraLyricsSongText">Loading lyrics...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menoraSearchModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; background: rgba(4, 19, 33, 0.85); z-index: 9999999; justify-content: center; align-items: flex-start; padding-top: 40px; box-sizing: border-box;">
+      <div style="background: #041321; width: 92%; max-width: 480px; border-radius: 4px; padding: 16px; border: 1.5px solid #468062; box-shadow: 0 10px 30px rgba(0,0,0,0.6); max-height: 82vh; display: flex; flex-direction: column; box-sizing: border-box;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-shrink: 0; border-bottom: 1px solid rgba(70, 128, 98, 0.3); padding-bottom: 8px;">
+          <h3 style="margin: 0; font-size: 16px; color: #FFFACD; letter-spacing: 1px; text-transform: uppercase; font-family: 'Trebuchet MS', Arial, sans-serif; font-weight: bold;">Search MELODIES</h3>
+          <button id="menoraCloseSearchBtn" style="background: none; border: none; font-size: 26px; font-weight: bold; cursor: pointer; color: #fffacd; padding: 0 4px; line-height: 1; outline: none;">&times;</button>
+        </div>
+
+        <input 
+          type="text" 
+          id="menoraModalSearchInput" 
+          placeholder="TYPE SONG NAME OR KEYWORD..." 
+          style="width: 100%; padding: 10px 12px; background: #061b2e; border: 1.5px solid #468062; border-radius: 2px; font-size: 15px; font-family: 'Trebuchet MS', sans-serif; color: #FFFDF4; box-sizing: border-box; margin-bottom: 12px; outline: none; font-weight: bold;"
+        >
+
+        <div id="menoraModalSearchResults" style="overflow-y: auto; flex-grow: 1; padding-right: 4px;">
+          </div>
+
+      </div>
+    </div>
+
+    <div id="menoraPlaylistModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; background: rgba(4, 19, 33, 0.85); z-index: 9999999; justify-content: center; align-items: flex-start; padding-top: 40px; box-sizing: border-box;">
+      <div style="background: #041321; width: 92%; max-width: 480px; border-radius: 4px; padding: 16px; border: 1.5px solid #468062; box-shadow: 0 10px 30px rgba(0,0,0,0.6); max-height: 82vh; display: flex; flex-direction: column; box-sizing: border-box;">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-shrink: 0; border-bottom: 1px solid rgba(70, 128, 98, 0.3); padding-bottom: 8px;">
+          <h3 style="margin: 0; font-size: 16px; color: #FFFACD; letter-spacing: 1px; text-transform: uppercase; font-family: 'Trebuchet MS', Arial, sans-serif; font-weight: bold;">Select Playlist</h3>
+          <button id="menoraClosePlaylistBtn" style="background: none; border: none; font-size: 26px; font-weight: bold; cursor: pointer; color: #fffacd; padding: 0 4px; line-height: 1; outline: none;">&times;</button>
+        </div>
+
+        <div id="menoraPlaylistModalList" style="overflow-y: auto; flex-grow: 1; padding-right: 2px;">
+          </div>
+
+      </div>
+    </div>
+    
+    <div id="menoraGreetModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; background: rgba(4, 19, 33, 0.85); z-index: 9999999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+  <div style="background: #FFFFFF; width: 92%; max-width: 420px; border-radius: 2px; padding: 20px; border: 8px solid #00643C; box-shadow: 0 10px 30px rgba(0,0,0,0.6); box-sizing: border-box; text-align: center;">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhifJThI3op7GGySh7_8vKZwtMSqxCMGKbI4fG456KL7Om9sFey_AkCya6lOvRZTKkpyBDzyy-0bEHx19akt7I0doyuYGsMlXwCR1SsyVQMVG6ncerJ8TM9BH-B6xgKAXN-eJosWo7DY6ZvxQlpj3z3tM7kIgJS0dGxFo5IEmaY9bQHehYtIGOwX51ecr4/s400/IMG-20260621-WA0146%281%29.jpg" alt="MENORA MELODIES" style="max-width: 150px; width: 100%; height: auto; margin-bottom: 0px;">
+    
+    <div style="font-size: 18px; color: #00643C; letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; margin-bottom: 10px;">MENORA MELODIES</div>
+
+    <div id="menoraGreetMessage" style="font-size: 15px; color: #041321; font-family: 'Trebuchet MS', Arial, sans-serif; line-height: 1.5; margin-bottom: 18px;">Welcome!</div>
+    <button id="menoraGreetCloseBtn" style="background: #00643C; color: #FFFFFF; border: none; padding: 8px 24px; border-radius: 2px; font-weight: bold; cursor: pointer; font-family: 'Trebuchet MS', Arial, sans-serif;">CONTINUE</button>
+  </div>
+</div>
+
+  </div>
+  
+
+  <style>
+    #menoraAudioScope { font-family: "Trebuchet MS", Arial, sans-serif !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; height: 100dvh !important; z-index: 999999 !important; background: #041321 !important; box-sizing: border-box !important; overflow: hidden !important; }
+    
+    #menoraAudioScope * { box-sizing: border-box !important; }
+    
+    #menoraAudioScope .menora-player-box { background: #041321 !important; display: flex !important; flex-direction: column !important; width: 100% !important; height: 100% !important; }
+    
+    #menoraAudioScope .menora-top-bar { background: #468062 !important; color: #FFFDF4 !important; display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 10px 14px !important; gap: 14px !important; flex-shrink: 0 !important; }
+    
+    #menoraAudioScope .menora-header-left-group { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; flex: 1 !important; overflow: hidden !important; }
+    
+    #menoraAudioScope .menora-widget-brand { font-size: 18px !important; font-weight: bold !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; white-space: nowrap !important; margin: 0 !important; padding: 0 !important; color: #FFFDF4 !important; }
+    
+    #menoraAudioScope .menora-meta-area { width: 100% !important; overflow: hidden !important; text-align: left !important; }
+    #menoraAudioScope .menora-tag { font-size: 11px !important; display: block !important; letter-spacing: 1.6px !important; font-weight: bold !important; opacity: 0.75 !important; margin-bottom: 1px !important; color: #FFFDF4 !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; }
+    
+    #menoraAudioScope .menora-track-title { font-size: 17px !important; font-weight: 600 !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; opacity: 0.95 !important; color: #FFFDF4 !important; margin: 0 !important; font-family: "Trebuchet MS", Arial, sans-serif !important; }
+    
+    /* Reorganized layout for actions column (one below the other) */
+    #menoraAudioScope .menora-header-right-actions { display: flex !important; flex-direction: column !important; gap: 4px !important; flex-shrink: 0 !important; align-items: flex-end !important; }
+
+    #menoraAudioScope .menora-home-link-btn,
+    #menoraAudioScope .menora-search-trigger-btn,
+    #menoraAudioScope .menora-share-action-btn { width: 66px !important; height: 24px !important; border-radius: 2px !important; font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 11px !important; display: flex !important; align-items: center !important; justify-content: center !important; cursor: pointer !important; transition: all 0.2s ease !important; text-decoration: none !important; outline: none !important; background: #fffacd !important; color: #041321 !important; border: none !important; padding: 0 !important; }
+    
+    #menoraAudioScope .menora-home-link-btn:hover,
+    #menoraAudioScope .menora-search-trigger-btn:hover,
+    #menoraAudioScope .menora-share-action-btn:hover { background: #cbdcf0 !important; }
+
+    #menoraAudioScope .menora-controls-row { display: flex !important; flex-direction: column !important; align-items: center !important; padding: 8px 16px !important; gap: 10px !important; background: #061b2e !important; border-bottom: 1px solid rgba(255, 253, 244, 0.1) !important; flex-shrink: 0 !important; }
+    #menoraAudioScope .menora-progress-wrapper { width: 100% !important; display: flex !important; align-items: center !important; gap: 10px !important; }
+    #menoraAudioScope .menora-media-keys-group { display: flex !important; align-items: center !important; justify-content: center !important; gap: 14px !important; width: 100% !important; }
+
+    #menoraAudioScope .menora-action-btn { width: 84px !important; height: 38px !important; border-radius: 2px !important; font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 12px !important; font-weight: bold !important; display: flex !important; align-items: center !important; justify-content: center !important; cursor: pointer !important; transition: all 0.2s ease !important; outline: none !important; background: #FFFDF4 !important; color: #041321 !important; border: none !important; padding: 0 !important; }
+    #menoraAudioScope .menora-action-btn:hover { background: #e6e2da !important; }
+    #menoraAudioScope .menora-skip-btn { width: 64px !important; background: rgba(255, 253, 244, 0.15) !important; color: #FFFDF4 !important; font-size: 11px !important; }
+    #menoraAudioScope .menora-skip-btn:hover { background: rgba(255, 253, 244, 0.3) !important; }
+    
+    #menoraAudioScope .menora-time-display { font-size: 11px !important; font-weight: 600 !important; color: #FFFDF4 !important; min-width: 28px !important; }
+    #menoraAudioScope .menora-slider-container { flex: 1 !important; display: flex !important; align-items: center !important; }
+    #menoraAudioScope .menora-scrub-bar { width: 100% !important; accent-color: #FFFDF4 !important; cursor: pointer !important; height: 5px !important; margin: 0 !important; background: rgba(255, 255, 255, 0.2) !important; border: none !important; }
+    
+    #menoraAudioScope .menora-filter-strip { padding: 10px 14px !important; background: #051929 !important; border-bottom: 1px solid rgba(255, 253, 244, 0.08) !important; flex-shrink: 0 !important; display: flex !important; flex-direction: column !important; gap: 2px !important; }
+    #menoraAudioScope .lang-toggle { display: flex !important; width: 100% !important; margin-bottom: 4px !important; }
+    #menoraAudioScope .lang-toggle button { flex: 1 !important; padding: 5px !important; font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 14px !important; border: none !important; cursor: pointer !important; font-weight: bold !important; transition: all 0.1s ease !important; outline: none !important; }
+    #menoraAudioScope .lang-toggle button[aria-pressed="true"] { background: #00643C !important; color: #FFFFFF !important; border: 1px solid #000000 !important; }
+    #menoraAudioScope .lang-toggle button[aria-pressed="false"] { background: #FFFFFF !important; color: #00643C !important; border: 1px solid #00643C !important; }
+    
+    #menoraAudioScope .menora-filter-heading { margin: 0 0 2px 0 !important; padding: 0 !important; font-size: 11px !important; font-weight: 800 !important; color: #468062 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; }
+    #menoraAudioScope .menora-custom-select { width: 100% !important; padding: 8px 12px !important; border-radius: 2px !important; border: 1.5px solid #468062 !important; background: #041321 !important; font-size: 14px !important; font-family: 'Trebuchet MS', sans-serif !important; color: #FFFDF4 !important; outline: none !important; cursor: pointer !important; font-weight: bold !important; }
+    #menoraAudioScope .menora-playlist-select-btn { display: flex !important; align-items: center !important; justify-content: space-between !important; text-align: left !important; }
+    #menoraAudioScope .menora-select-caret { font-size: 26px !important; opacity: 0.85 !important; margin-left: 8px !important; flex-shrink: 0 !important; }
+    
+    #menoraAudioScope .menora-queue-panel { background: #E6F2FF !important; flex: 1 !important; display: flex !important; flex-direction: column !important; overflow: hidden !important; position: relative !important; }
+
+    #menoraAudioScope .menora-queue-header-row { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; flex-shrink: 0 !important; padding-right: 14px !important; border-bottom: 5px solid rgba(4, 19, 33, 0.1) !important; }
+    #menoraAudioScope .menora-queue-title { font-family: "Trebuchet MS", Arial, sans-serif !important; color: #041321 !important; font-size: 11px !important; font-weight: bold !important; padding: 4px 6px !important; text-transform: uppercase !important; letter-spacing: 0.8px !important; opacity: 0.8 !important; margin: 0 !important; flex-shrink: 0 !important; }
+    
+    #menoraAudioScope .menora-view-lyrics-btn { font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 13px !important; font-weight: bold !important; letter-spacing: 1px !important; text-transform: uppercase !important; background: #00643C !important; color: #FFFFFF !important; border: none !important; border-radius: 2px !important; padding: 5px 10px !important; margin: 0 !important; line-height: normal !important; cursor: pointer !important; flex-shrink: 0 !important; }
+    
+    #menoraAudioScope .menora-view-lyrics-btn:hover { background: #468062 !important; }
+
+    #menoraAudioScope .menora-queue-scroller { flex: 1 !important; overflow-y: auto !important; }
+    
+    #menoraAudioScope .menora-mini-item { font-family: "Trebuchet MS", Arial, sans-serif !important; padding: 6px 8px !important; font-size: 16px !important; font-weight: bold !important; cursor: pointer !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; color: #041321 !important; transition: all 0.2s !important; display: flex !important; align-items: center !important; gap: 2px !important; background: transparent !important; border: none !important; border-bottom: 2px solid rgba(4, 19, 33, 0.05) !important; width: 100% !important; text-align: left !important; }
+    #menoraAudioScope .menora-mini-item:hover { background: rgba(4, 19, 33, 0.06) !important; padding-left: 16px !important; }
+    #menoraAudioScope .menora-mini-item.playing-now-active { background: rgba(70, 128, 98, 0.18) !important; font-weight: bold !important; color: #00643C !important; }
+
+    #menoraAudioScope #menoraLyricsOverlay { display: none !important; position: absolute !important; inset: 0 !important; background: #041321 !important; z-index: 10 !important; flex-direction: column !important; overflow: hidden !important; }
+    #menoraAudioScope #menoraLyricsOverlay.open { display: flex !important; }
+
+    #menoraAudioScope .menoraLyrics-header { display: flex !important; align-items: center !important; justify-content: space-between !important; background: #468062 !important; color: #FFFDF4 !important; padding: 8px 12px !important; font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 13px !important; font-weight: bold !important; letter-spacing: 1px !important; text-transform: uppercase !important; flex-shrink: 0 !important; }
+    #menoraAudioScope #menoraLyricsCloseBtn { background: none !important; border: none !important; color: #FFFDF4 !important; font-size: 22px !important; font-weight: bold !important; line-height: 1 !important; cursor: pointer !important; padding: 0 4px !important; }
+
+    #menoraAudioScope .menoraLyrics-tabStrip { display: flex !important; flex-direction: row !important; overflow-x: auto !important; overflow-y: hidden !important; white-space: nowrap !important; background: #051929 !important; padding: 8px 10px !important; gap: 8px !important; flex-shrink: 0 !important; border-bottom: 1px solid rgba(255,253,244,0.1) !important; -webkit-overflow-scrolling: touch !important; }
+    #menoraAudioScope .menoraLyrics-tab { flex-shrink: 0 !important; min-width: 36px !important; height: 32px !important; padding: 0 10px !important; border-radius: 2px !important; background: #FFFDF4 !important; color: #041321 !important; font-family: "Trebuchet MS", Arial, sans-serif !important; font-size: 14px !important; font-weight: bold !important; border: none !important; cursor: pointer !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+    #menoraAudioScope .menoraLyrics-tab.active { background: #00643C !important; color: #FFFFFF !important; }
+
+    #menoraAudioScope .menoraLyrics-body { flex: 1 !important; overflow-y: auto !important; padding: 14px 16px 24px 16px !important; -webkit-overflow-scrolling: touch !important; }
+    #menoraAudioScope .menoraLyrics-songTitle { font-size: 18px !important; font-weight: bold !important; color: #FFFACD !important; margin-bottom: 10px !important; }
+    #menoraAudioScope .menoraLyrics-songText { font-size: 17px !important; font-weight: bold !important; line-height: 1.7 !important; color: #FFFDF4 !important; white-space: pre-line !important; }
+
+    @media (orientation: landscape) and (max-height: 500px) {
+      #menoraAudioScope .menora-top-bar { padding: 4px 16px !important; }
+      #menoraAudioScope .menora-controls-row { padding: 4px 16px !important; gap: 4px !important; }
+      #menoraAudioScope .menora-filter-strip { padding: 4px 16px !important; }
+      #menoraAudioScope .menora-action-btn { height: 32px !important; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      const checkTarget = document.getElementById('menoraAudioScope');
+      if (!checkTarget) return;
+
+      const menoraAudioContext = {
+        tracks: [], 
+        activeSet: [],      
+        currentPlaySet: [], 
+        currentIndex: 0, 
+        selectedLanguage: 'tamil', 
+        selectedPlaylist: null,
+        modalPath: [],
+        dom: {},
+        lyricsSongs: [],
+        lyricsActiveIndex: 0,
+        currentLyricsGenre: null,
+
+        playlistRegistry: {
+          tamil: [
+            
+        		{ label: 'KEERTHANAI', children: 
+        		      [
+        				{ value: 'tamil-keerthanai-1', label: 'KEERTHANAI A-D' },
+        				{ value: 'tamil-keerthanai-2', label: 'KEERTHANAI E-N' },
+        				{ value: 'tamil-keerthanai-3', label: 'KEERTHANAI M-V' }
+        			  ]
+        		},
+              
+            { value: 'tamil-bsuc', label: 'BSUC SONGS' },
+            
+            { value: 't-oldfmpb', label: 'OLD FMPB CLASSICS' },
+            
+        		{ label: 'RC SONGS', children: 
+        		      [
+        			    { value: 't-rcold', label: 'RC OLD SONGS - 24' }
+        			  ]
+        		},
+            
+        		
+        		{ label: 'RC IRAI ALAIGAL', children:
+        		      [
+        			    { value: 't-ia-varugai', label: 'VARUGAI A - 60' },
+        			    { value: 't-ia-varugai1', label: 'VARUGAI B - 56' }
+        			  ]
+                },
+             
+            
+        		{ label: 'FR. BERCHMANS', children: 
+        			  [
+        			    { value: 'berchmans-vol3', label: 'Will be added shortly' }
+        			  ]
+        		}
+          ],
+          
+          
+          english: [
+            { value: 'e-jingles', label: 'CAROLS' },
+            { value: 'english-instrumental', label: 'Instrumentals / Backing Tracks' }
+          ]
+        },
+
+        setup: function() {
+          this.dom.engine = document.getElementById('menoraScopeEngine');
+          this.dom.title = document.getElementById('menoraScopeTitle');
+          this.dom.nowPlayingTag = document.getElementById('menoraScopeNowPlayingTag');
+          this.dom.playPause = document.getElementById('menoraScopePlayPause');
+          this.dom.prevBtn = document.getElementById('menoraScopePrev');
+          this.dom.nextBtn = document.getElementById('menoraScopeNext');
+          this.dom.bar = document.getElementById('menoraScopeBar');
+          this.dom.current = document.getElementById('menoraScopeCurrentTime');
+          this.dom.duration = document.getElementById('menoraScopeDuration');
+          this.dom.miniQueue = document.getElementById('menoraScopeMiniList');
+          this.dom.share = document.getElementById('menoraScopeShare');
+          
+          this.dom.btnTamil = document.getElementById('menoraScopeBtnTamil');
+          this.dom.btnEnglish = document.getElementById('menoraScopeBtnEnglish');
+
+          this.dom.searchBtn = document.getElementById('menoraScopeSearchBtn');
+          this.dom.searchModal = document.getElementById('menoraSearchModal');
+          this.dom.closeSearchBtn = document.getElementById('menoraCloseSearchBtn');
+          this.dom.searchInput = document.getElementById('menoraModalSearchInput');
+          this.dom.searchResults = document.getElementById('menoraModalSearchResults');
+
+          this.dom.playlistBtn = document.getElementById('menoraScopeSelectBtn');
+          this.dom.playlistSelectedLabel = document.getElementById('menoraScopeSelectedLabel');
+          this.dom.playlistModal = document.getElementById('menoraPlaylistModal');
+          this.dom.closePlaylistBtn = document.getElementById('menoraClosePlaylistBtn');
+          this.dom.playlistModalList = document.getElementById('menoraPlaylistModalList');
+
+          this.dom.viewLyricsBtn = document.getElementById('menoraViewLyricsBtn');
+
+          this.dom.lyricsOverlay = document.getElementById('menoraLyricsOverlay');
+          this.dom.lyricsHeaderTitle = document.getElementById('menoraLyricsHeaderTitle');
+          this.dom.lyricsCloseBtn = document.getElementById('menoraLyricsCloseBtn');
+          this.dom.lyricsTabStrip = document.getElementById('menoraLyricsTabStrip');
+          this.dom.lyricsSongTitle = document.getElementById('menoraLyricsSongTitle');
+          this.dom.lyricsSongText = document.getElementById('menoraLyricsSongText');
+          this.dom.lyricsBodyScroll = document.getElementById('menoraLyricsBodyScroll');
+
+          if (!this.dom.engine || !this.dom.title) return;
+          const self = this;
+          const tamilUrl = 'https://raw.githubusercontent.com/menoradotin/MENORA/refs/heads/main/playlist.json?v=' + Date.now();
+          const englishUrl = 'https://raw.githubusercontent.com/menoradotin/MENORA/refs/heads/main/playlist1.json?v=' + Date.now();
+
+          Promise.all([
+            fetch(tamilUrl).then(r => r.json()),
+            fetch(englishUrl).then(r => r.json())
+          ])
+          .then(([tamilData, englishData]) => {
+            self.tracks = tamilData.concat(englishData);
+            self.renderPlaylistOptions(true); 
+            self.bindEvents();
+            self.setupSearchEngine(); 
+          })
+          .catch(err => {
+            console.error("Error loading tracks:", err);
+          });
+          
+          fetch('https://raw.githubusercontent.com/menoradotin/MENORA/refs/heads/main/greetings.json?v=' + Date.now())
+            .then(response => response.json())
+            .then(data => {
+              const modal = document.getElementById('menoraGreetModal');
+              const msgBox = document.getElementById('menoraGreetMessage');
+              const closeBtn = document.getElementById('menoraGreetCloseBtn');
+              if (data.message && msgBox) msgBox.innerHTML = data.message;
+              if (modal) modal.style.display = 'flex';
+              if (closeBtn) closeBtn.onclick = () => { modal.style.display = 'none'; };
+              if (modal) modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+            })
+            .catch(err => console.error("Greeting load failed:", err));
+        },
+
+        bindEvents: function() {
+          const self = this;
+          if(this.dom.playPause) this.dom.playPause.onclick = () => self.handlePlaybackToggle();
+          if(this.dom.prevBtn) this.dom.prevBtn.onclick = () => self.playPreviousTrack();
+          if(this.dom.nextBtn) this.dom.nextBtn.onclick = () => self.playNextTrack();
+          if(this.dom.bar) this.dom.bar.oninput = () => self.handleManualSeeking();
+          if(this.dom.share) this.dom.share.onclick = () => self.handleShareIntent();
+
+          if(this.dom.btnTamil) this.dom.btnTamil.onclick = () => self.switchLanguageScope('tamil');
+          if(this.dom.btnEnglish) this.dom.btnEnglish.onclick = () => self.switchLanguageScope('english');
+
+          if(this.dom.playlistBtn) this.dom.playlistBtn.onclick = () => self.openPlaylistModal();
+          if(this.dom.closePlaylistBtn) this.dom.closePlaylistBtn.onclick = () => self.closePlaylistModal();
+          if(this.dom.playlistModal) this.dom.playlistModal.onclick = (e) => { if (e.target === self.dom.playlistModal) self.closePlaylistModal(); };
+
+          if(this.dom.lyricsCloseBtn) this.dom.lyricsCloseBtn.onclick = () => self.closeLyricsPanel();
+
+          if(this.dom.viewLyricsBtn) this.dom.viewLyricsBtn.onclick = () => {
+            if(!self.currentLyricsGenre) return;
+            const playingTrack = self.currentPlaySet[self.currentIndex];
+            let targetSongIdx = 0;
+            if (playingTrack && playingTrack.genre === self.currentLyricsGenre) {
+              const currentActualSongIdx = self.currentPlaySet.slice(0, self.currentIndex + 1).filter(t => !t.isCredit).length - 1;
+              targetSongIdx = currentActualSongIdx >= 0 ? currentActualSongIdx : 0;
+            }
+            self.openLyricsPanel(self.currentLyricsGenre, targetSongIdx);
+          };
+
+          if(this.dom.engine) {
+            this.dom.engine.addEventListener('timeupdate', () => {
+              if(self.dom.engine.duration) {
+                const progress = (self.dom.engine.currentTime / self.dom.engine.duration) * 100;
+                if(self.dom.bar) self.dom.bar.value = progress;
+                if(self.dom.current) self.dom.current.textContent = self.formatTrackTime(self.dom.engine.currentTime);
+              }
+            });
+            this.dom.engine.addEventListener('loadedmetadata', () => {
+              if(self.dom.duration) self.dom.duration.textContent = self.formatTrackTime(self.dom.engine.duration);
+            });
+            this.dom.engine.addEventListener('ended', () => {
+              self.playNextTrack();
+            });
+          }
+        },
+
+        setupSearchEngine: function() {
+          const self = this;
+          if (!this.dom.searchBtn || !this.dom.searchModal) return;
+
+          this.dom.searchBtn.onclick = () => {
+            self.dom.searchModal.style.display = 'flex';
+            self.dom.searchInput.value = '';
+            self.dom.searchResults.innerHTML = '<div style="padding: 16px; color: #fffacd; font-size: 14px; text-align: center; font-weight: bold;">Come, let us shout aloud to the Rock of our salvation. — Psalm 95:1</div>';
+            setTimeout(() => self.dom.searchInput.focus(), 50);
+          };
+
+          const closeAction = () => { self.dom.searchModal.style.display = 'none'; };
+          this.dom.closeSearchBtn.onclick = closeAction;
+          this.dom.searchModal.onclick = (e) => { if (e.target === self.dom.searchModal) closeAction(); };
+
+          this.dom.searchInput.oninput = function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            self.dom.searchResults.innerHTML = '';
+
+            if (query === '') {
+              self.dom.searchResults.innerHTML = '<div style="padding: 16px; color: #fffacd; font-size: 14px; text-align: center; font-weight: bold;">Come, let us shout aloud to the Rock of our salvation. — Psalm 95:1</div>';
+              return;
+            }
+
+            const matches = self.tracks.filter(track => {
+              if (track.isCredit || !track.url) return false;
+              const titleMatch = track.title ? track.title.toLowerCase().includes(query) : false;
+              const metaMatch = track.meta ? track.meta.toLowerCase().includes(query) : false;
+              return titleMatch || metaMatch;
+            });
+
+            if (matches.length === 0) {
+              self.dom.searchResults.innerHTML = '<div style="padding: 20px; color: rgba(255,253,244,0.6); font-size: 14px; text-align: center;">No matching tracks found</div>';
+              return;
+            }
+
+            matches.forEach(track => {
+              const row = document.createElement('div');
+              row.style.cssText = "padding: 10px 8px; border-bottom: 1px solid rgba(255, 253, 244, 0.1); cursor: pointer; transition: all 0.2s; color: #FFFDF4; font-family: 'Trebuchet MS', Arial; font-size: 15px; font-weight: bold;";
+              
+              let playlistLabel = self.findPlaylistLabel(track.genre);
+
+              const metaInfo = track.meta ? ` &bull; ${track.meta}` : "";
+              row.innerHTML = `<div>${track.title}</div><div style="font-size: 11px; color: #468062; font-weight: normal; margin-top: 2px;">${playlistLabel}${metaInfo}</div>`;
+              
+              row.onmouseover = () => { row.style.background = "rgba(70, 128, 98, 0.15)"; row.style.paddingLeft = "12px"; };
+              row.onmouseout = () => { row.style.background = "transparent"; row.style.paddingLeft = "8px"; };
+
+              row.onclick = () => {
+                const targetLang = self.flattenLeaves(self.playlistRegistry.tamil).some(p => p.value === track.genre) ? 'tamil' : 'english';
+                
+                if (self.selectedLanguage !== targetLang) {
+                  self.selectedLanguage = targetLang;
+                  self.dom.btnTamil.setAttribute('aria-pressed', targetLang === 'tamil' ? 'true' : 'false');
+                  self.dom.btnEnglish.setAttribute('aria-pressed', targetLang === 'english' ? 'true' : 'false');
+                }
+
+                self.selectedPlaylist = track.genre;
+                if(self.dom.playlistSelectedLabel) self.dom.playlistSelectedLabel.textContent = self.findPlaylistLabel(track.genre);
+
+                self.activeSet = self.tracks.filter(t => t.genre === track.genre);
+                self.currentPlaySet = [...self.activeSet];
+                
+                const matchIdx = self.currentPlaySet.findIndex(t => t.id === track.id);
+                self.loadTrack(matchIdx, true);
+                closeAction();
+              };
+
+              self.dom.searchResults.appendChild(row);
+            });
+          };
+        },
+
+        playNextTrack: function() {
+          const nextIndex = this.currentIndex + 1;
+          if(nextIndex !== this.currentPlaySet.length) {
+            this.loadTrack(nextIndex, true);
+          } else {
+            this.loadTrack(0, false); 
+          }
+        },
+
+        playPreviousTrack: function() {
+          const prevIndex = this.currentIndex - 1;
+          if(prevIndex >= 0) {
+            this.loadTrack(prevIndex, true);
+          } else {
+            this.loadTrack(this.currentPlaySet.length - 1, true); 
+          }
+        },
+
+        handleShareIntent: function() {
+          const shareUrl = window.location.href;
+
+          if (navigator.share) {
+            navigator.share({
+              url: shareUrl
+            })
+            .catch((err) => console.log("Sharing cancelled or failed", err));
+          } else {
+            navigator.clipboard.writeText(shareUrl)
+              .then(() => {
+                alert("Playlist link copied to clipboard! Share it with your friends.");
+              })
+              .catch(() => {
+                alert("Could not copy link automatically. Please copy the URL from your browser bar.");
+              });
+          }
+        },
+
+        updateBluetoothControls: function(track) {
+          const self = this;
+          if ('mediaSession' in navigator) {
+            const cleanTitle = track.title.replace(/<\/?[^>]+(>|$)/g, "");
+
+            navigator.mediaSession.metadata = new MediaMetadata({
+              title: cleanTitle,
+              artist: 'Menora Melodies',
+              album: 'Menora Playlists'
+            });
+
+            navigator.mediaSession.setActionHandler('nexttrack', () => {
+              self.playNextTrack();
+            });
+
+            navigator.mediaSession.setActionHandler('previoustrack', () => {
+              self.playPreviousTrack();
+            });
+
+            navigator.mediaSession.setActionHandler('play', () => {
+              self.handlePlaybackToggle();
+            });
+            navigator.mediaSession.setActionHandler('pause', () => {
+              self.handlePlaybackToggle();
+            });
+          }
+        },
+
+        switchLanguageScope: function(targetLang) {
+          if(this.selectedLanguage === targetLang) return;
+          this.selectedLanguage = targetLang;
+
+          if(targetLang === 'tamil') {
+            this.dom.btnTamil.setAttribute('aria-pressed', 'true');
+            this.dom.btnEnglish.setAttribute('aria-pressed', 'false');
+          } else {
+            this.dom.btnTamil.setAttribute('aria-pressed', 'false');
+            this.dom.btnEnglish.setAttribute('aria-pressed', 'true');
+          }
+
+          this.selectedPlaylist = null;
+          this.renderPlaylistOptions(false); 
+        },
+
+        flattenLeaves: function(list) {
+          let result = [];
+          const self = this;
+          list.forEach(item => {
+            if (item.children) {
+              result = result.concat(self.flattenLeaves(item.children));
+            } else if (item.value) {
+              result.push(item);
+            }
+          });
+          return result;
+        },
+
+        findPlaylistLabel: function(value) {
+          const search = (list) => {
+            for (const item of list) {
+              if (item.value === value) return item.label;
+              if (item.children) {
+                const found = search(item.children);
+                if (found) return found;
+              }
+            }
+            return null;
+          };
+          for (const lang in this.playlistRegistry) {
+            const found = search(this.playlistRegistry[lang]);
+            if (found) return found;
+          }
+          return "";
+        },
+
+        updateNowPlayingLabel: function(genreValue) {
+          if(!this.dom.nowPlayingTag) return;
+          const label = this.findPlaylistLabel(genreValue);
+          this.dom.nowPlayingTag.textContent = label ? ('NOW PLAYING - ' + label) : 'NOW PLAYING';
+        },
+
+        openPlaylistModal: function() {
+          if(!this.dom.playlistModal) return;
+          this.modalPath = [];
+          this.populatePlaylistModalList();
+          this.dom.playlistModal.style.display = 'flex';
+        },
+
+        closePlaylistModal: function() {
+          if(!this.dom.playlistModal) return;
+          this.modalPath = [];
+          this.dom.playlistModal.style.display = 'none';
+        },
+
+        populatePlaylistModalList: function() {
+          if(!this.dom.playlistModalList) return;
+          this.dom.playlistModalList.innerHTML = "";
+          const self = this;
+
+          let currentLevel = this.playlistRegistry[this.selectedLanguage];
+          this.modalPath.forEach(node => { currentLevel = node.children; });
+
+          if (this.modalPath.length > 0) {
+            const backRow = document.createElement('div');
+            backRow.style.cssText = "padding: 7px 10px; border-bottom: 1px solid rgba(70,128,98,0.4); cursor: pointer; font-family: 'Trebuchet MS', Arial; font-size: 15px; font-weight: bold; color: #FFFACD;";
+            backRow.innerHTML = "&#8249; BACK &nbsp;&bull;&nbsp; " + this.modalPath.map(n => n.label).join(" / ");
+            backRow.onmouseover = () => { backRow.style.background = "rgba(70,128,98,0.15)"; };
+            backRow.onmouseout = () => { backRow.style.background = "transparent"; };
+            backRow.onclick = () => {
+              self.modalPath.pop();
+              self.populatePlaylistModalList();
+            };
+            this.dom.playlistModalList.appendChild(backRow);
+          }
+
+          currentLevel.forEach(playlist => {
+            const hasChildren = !!playlist.children;
+            const isActive = !hasChildren && playlist.value === self.selectedPlaylist;
+            const row = document.createElement('div');
+            row.style.cssText = "padding: 7px 10px; border-bottom: 1px solid rgba(255, 253, 244, 0.1); cursor: pointer; transition: all 0.2s; font-family: 'Trebuchet MS', Arial; font-size: 14px; font-weight: bold; display:flex; align-items:center; justify-content:space-between; " + (isActive ? "background: rgba(70, 128, 98, 0.3); color: #FFFACD;" : "color: #FFFDF4;");
+
+            row.innerHTML = "<span>" + playlist.label + "</span>" + (hasChildren ? "<span style='opacity:0.7; font-size:26px;'>&#9656;</span>" : "");
+
+            row.onmouseover = () => { if(!isActive) row.style.background = "rgba(70, 128, 98, 0.15)"; };
+            row.onmouseout = () => { if(!isActive) row.style.background = "transparent"; };
+
+            row.onclick = () => {
+              if (hasChildren) {
+                self.modalPath.push(playlist);
+                self.populatePlaylistModalList();
+              } else {
+                self.selectedPlaylist = playlist.value;
+                if(self.dom.playlistSelectedLabel) self.dom.playlistSelectedLabel.textContent = playlist.label;
+                self.handleCategoryFiltering(false);
+                self.closePlaylistModal();
+              }
+            };
+
+            self.dom.playlistModalList.appendChild(row);
+          });
+        },
+
+        renderPlaylistOptions: function(isInitialSetup) {
+          const optionsList = this.playlistRegistry[this.selectedLanguage];
+          const leaves = this.flattenLeaves(optionsList);
+
+          if(!this.selectedPlaylist || !leaves.some(p => p.value === this.selectedPlaylist)) {
+            this.selectedPlaylist = leaves.length ? leaves[0].value : null;
+          }
+
+          if(this.dom.playlistSelectedLabel) {
+            this.dom.playlistSelectedLabel.textContent = this.findPlaylistLabel(this.selectedPlaylist) || 'Select Playlist';
+          }
+
+          this.handleCategoryFiltering(isInitialSetup);
+        },
+
+        handleCategoryFiltering: function(isInitialSetup) {
+  if(!this.selectedPlaylist) return;
+  const chosenValue = this.selectedPlaylist;
+  this.activeSet = this.tracks.filter(t => t.genre === chosenValue);
+  
+  this.updateLyricsButtonVisibility();
+  this.renderMiniQueue();
+
+  const isCurrentlyPlaying = this.dom.engine && !this.dom.engine.paused;
+
+  if (!isCurrentlyPlaying) {
+    this.currentPlaySet = [...this.activeSet];
+    const firstPlayableIdx = this.currentPlaySet.findIndex(t => !t.isCredit);
+    this.loadTrack(firstPlayableIdx >= 0 ? firstPlayableIdx : 0, false);
+  }
+},
+
+        loadTrack: function(idx, triggerPlayback) {
+          if(this.currentPlaySet.length === 0) return;
+          this.currentIndex = idx;
+          const track = this.currentPlaySet[this.currentIndex];
+
+          this.updateNowPlayingLabel(track.genre);
+
+          if(track.isCredit) {
+            if(this.dom.engine) {
+              this.dom.engine.pause();
+              this.dom.engine.src = "";
+            }
+            if(this.dom.title) this.dom.title.innerHTML = track.title; 
+            if(this.dom.bar) this.dom.bar.value = 0;
+            if(this.dom.current) this.dom.current.textContent = "0:00";
+            if(this.dom.duration) this.dom.duration.textContent = "0:00";
+            if(this.dom.playPause) this.dom.playPause.innerHTML = "<b>PLAY</b>";
+            
+            this.renderMiniQueue();
+            return;
+          }
+
+          const activeTrackNum = this.currentPlaySet
+            .slice(0, this.currentIndex + 1)
+            .filter(t => !t.isCredit).length;
+
+          if(this.dom.engine) this.dom.engine.src = track.url;
+          if(this.dom.title) this.dom.title.innerHTML = activeTrackNum + ". " + track.title;
+          if(this.dom.bar) this.dom.bar.value = 0;
+          if(this.dom.current) this.dom.current.textContent = "0:00";
+
+          if(triggerPlayback) {
+            if(this.dom.engine) this.dom.engine.play().catch(() => {});
+            if(this.dom.playPause) this.dom.playPause.innerHTML = "<b>PAUSE</b>";
+            if('mediaSession' in navigator) navigator.mediaSession.playbackState = "playing";
+          } else {
+            if(this.dom.playPause) this.dom.playPause.innerHTML = "<b>PLAY</b>";
+            if('mediaSession' in navigator) navigator.mediaSession.playbackState = "paused";
+          }
+          
+          if (this.lyricsSongs.length > 0) {
+            const actualSongIndex = this.currentPlaySet.slice(0, this.currentIndex + 1).filter(t => !t.isCredit).length - 1;
+            if (actualSongIndex >= 0 && actualSongIndex < this.lyricsSongs.length) {
+              this.lyricsActiveIndex = actualSongIndex;
+              this.renderLyricsTabs();
+              this.renderLyricsContent();
+            }
+          }
+
+          this.updateBluetoothControls(track);
+          this.renderMiniQueue();
+        },
+
+        handlePlaybackToggle: function() {
+          const track = this.currentPlaySet[this.currentIndex];
+          if(track && track.isCredit) return;
+
+          if(!this.dom.engine.src && this.currentPlaySet.length > 0) {
+            this.loadTrack(0, true);
+            return;
+          }
+          if(this.dom.engine.paused) {
+            this.dom.engine.play().catch(() => {});
+            if(this.dom.playPause) this.dom.playPause.innerHTML = "<b>PAUSE</b>";
+            if('mediaSession' in navigator) navigator.mediaSession.playbackState = "playing";
+          } else {
+            this.dom.engine.pause();
+            if(this.dom.playPause) this.dom.playPause.innerHTML = "<b>PLAY</b>";
+            if('mediaSession' in navigator) navigator.mediaSession.playbackState = "paused";
+          }
+        },
+
+        handleManualSeeking: function() {
+          const track = this.currentPlaySet[this.currentIndex];
+          if(track && track.isCredit) return;
+
+          if(this.dom.engine.duration && this.dom.bar) {
+            this.dom.engine.currentTime = (this.dom.bar.value / 100) * this.dom.engine.duration;
+          }
+        },
+
+        updateLyricsButtonVisibility: function() {
+          const lyricsCredit = this.activeSet.find(t => t.isCredit && t.openLyrics);
+          this.currentLyricsGenre = lyricsCredit ? lyricsCredit.genre : null;
+          if(this.dom.viewLyricsBtn) {
+            this.dom.viewLyricsBtn.style.display = this.currentLyricsGenre ? 'inline-block' : 'none';
+          }
+        },
+
+        openLyricsPanel: function(genreKey, targetSongIdx = 0) {
+          const self = this;
+          this.lyricsSongs = [];
+          this.lyricsActiveIndex = targetSongIdx;
+
+          if(this.dom.lyricsHeaderTitle) this.dom.lyricsHeaderTitle.textContent = 'LYRICS - ' + (this.findPlaylistLabel(genreKey) || genreKey);
+          if(this.dom.lyricsSongText) this.dom.lyricsSongText.textContent = 'Loading lyrics...';
+          if(this.dom.lyricsTabStrip) this.dom.lyricsTabStrip.innerHTML = '';
+          if(this.dom.lyricsOverlay) this.dom.lyricsOverlay.classList.add('open');
+
+          const lyricsUrl = 'https://raw.githubusercontent.com/menoradotin/MENORA/refs/heads/main/' + encodeURIComponent(genreKey) + '.json?v=' + Date.now();
+
+          fetch(lyricsUrl)
+            .then(response => {
+              if(!response.ok) throw new Error('Lyrics file not found');
+              return response.json();
+            })
+            .then(data => {
+              self.lyricsSongs = data;
+              if(self.lyricsSongs.length === 0) {
+                if(self.dom.lyricsSongText) self.dom.lyricsSongText.textContent = 'No lyrics added for this playlist yet.';
+                return;
+              }
+              self.renderLyricsTabs();
+              self.renderLyricsContent();
+            })
+            .catch(err => {
+              console.error('Error loading lyrics:', err);
+              if(self.dom.lyricsSongText) self.dom.lyricsSongText.textContent = 'Lyrics for this playlist are not available yet.';
+            });
+        },
+
+        closeLyricsPanel: function() {
+          if(this.dom.lyricsOverlay) this.dom.lyricsOverlay.classList.remove('open');
+        },
+
+        renderLyricsTabs: function() {
+          if(!this.dom.lyricsTabStrip) return;
+          this.dom.lyricsTabStrip.innerHTML = '';
+          const self = this;
+          this.lyricsSongs.forEach((song, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'menoraLyrics-tab' + (idx === self.lyricsActiveIndex ? ' active' : '');
+            btn.textContent = song.number;
+            btn.onclick = () => {
+              self.lyricsActiveIndex = idx;
+              self.renderLyricsTabs();
+              self.renderLyricsContent();
+            };
+            self.dom.lyricsTabStrip.appendChild(btn);
+
+            if (idx === self.lyricsActiveIndex) {
+              setTimeout(() => {
+                btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }, 50);
+            }
+          });
+        },
+
+        renderLyricsContent: function() {
+          const song = this.lyricsSongs[this.lyricsActiveIndex];
+          if(!song) return;
+          if(this.dom.lyricsSongTitle) this.dom.lyricsSongTitle.textContent = song.number + '. ' + song.title;
+          if(this.dom.lyricsSongText) this.dom.lyricsSongText.textContent = song.lyrics || 'Lyrics coming soon.';
+          if(this.dom.lyricsBodyScroll) this.dom.lyricsBodyScroll.scrollTop = 0;
+        },
+
+        renderMiniQueue: function() {
+          if(!this.dom.miniQueue) return;
+          this.dom.miniQueue.innerHTML = "";
+          
+          if(this.activeSet.length === 0) {
+            this.dom.miniQueue.innerHTML = `<div class="menora-mini-item" style="color:#4f5f6e; font-style:italic;">No tracks loaded</div>`;
+            return;
+          }
+          
+          const self = this;
+          const currentTrack = this.currentPlaySet[this.currentIndex];
+
+          this.activeSet.forEach((track, index) => {
+            if(track.isCredit && track.openLyrics) return;
+
+            const row = document.createElement('div');
+            row.className = "menora-mini-item";
+            
+            if(currentTrack && track.id === currentTrack.id) {
+              row.className += " playing-now-active";
+            }
+
+            if(track.isCredit) {
+              row.style.textAlign = "center";
+              row.style.fontWeight = "bold";
+
+              if(track.link) {
+                row.innerHTML = `<a href="${track.link}" target="_blank" rel="noopener noreferrer" style="color:#00643C; text-decoration:underline;">${track.title}</a>`;
+                row.onclick = (e) => {
+                  e.stopPropagation();
+                };
+              } else {
+                row.innerHTML = track.title;
+                row.onclick = null;
+              }
+            } else {
+              const songNumber = this.activeSet.slice(0, index + 1).filter(t => !t.isCredit).length;
+              row.innerHTML = songNumber + ". " + track.title;
+
+              row.onclick = () => {
+                self.currentPlaySet = [...self.activeSet];
+                const matchIdx = self.currentPlaySet.findIndex(t => t.id === track.id);
+                self.loadTrack(matchIdx, true);
+              };
+            }
+            self.dom.miniQueue.appendChild(row);
+          });
+        },
+
+        formatTrackTime: function(secs) {
+          const min = Math.floor(secs / 60);
+          const sec = Math.floor(secs % 60);
+          const extraZero = (sec === 0 || sec < 10) ? "0" : "";
+          return min + ":" + extraZero + sec;
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', () => menoraAudioContext.setup());
+      } else {
+        menoraAudioContext.setup();
+      }
+    })();
+</script>
+
+</body>
+</html>
