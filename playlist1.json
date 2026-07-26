@@ -1,5 +1,18 @@
 [
 
+{ "id": "eccm1", "title": "Great Humble King", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/01_Great_Humble_King.mp3" },
+{ "id": "eccm2", "title": "Love That is Greater", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/02_Love_That_Is_Greater.mp3" },
+{ "id": "eccm3", "title": "Amazing Love", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/03_Amazing_Love.mp3" },
+{ "id": "eccm4", "title": "Search Me - Psalm 139", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/04_Search_Me_Psalm 139.mp3" },
+{ "id": "eccm5", "title": "My Offering", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/05_My_Offering.mp3" },
+{ "id": "eccm6", "title": "I Will Run", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/06_I_Will_Run.mp3" },
+{ "id": "eccm7", "title": "House of the Holy One", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/07_House_Of_The_Holy_One.mp3" },
+{ "id": "eccm8", "title": "When I Walk", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/08_When_I_Walk.mp3" },
+{ "id": "eccm9", "title": "In You", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/09_In_You.mp3" },
+{ "id": "eccm10", "title": "The Great I am", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/10_The_Great_I_Am.mp3" },
+{ "id": "eccm11", "title": "More Like You", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/11_More_Like_You.mp3" },	
+{ "id": "eccm12", "title": "Download Songs from firefighters.org", "meta": "", "genre": "e-ccm", "url": "", "isCredit": true },	
+	
 { "id": "ern1", "title": "His Image", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/His_Image.mp3" },
 { "id": "ern2", "title": "Isaiah - 41", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Isaiah_41_10.mp3" },
 { "id": "ern3", "title": "Jeremiah - 17", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Jeremiah_17.mp3" },
