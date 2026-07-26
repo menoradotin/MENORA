@@ -1,5 +1,23 @@
 [
 
+{ "id": "ern1", "title": "His Image", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/His_Image.mp3" },
+{ "id": "ern2", "title": "Isaiah - 41", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Isaiah_41_10.mp3" },
+{ "id": "ern3", "title": "Jeremiah - 17", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Jeremiah_17.mp3" },
+{ "id": "ern4", "title": "Jesus Will Be Made Known", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Jesus_Will_Be_Made_Known.mp3" },
+{ "id": "ern5", "title": "Looking Unto Jesus", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Looking_Unto_Jesus.mp3" },
+{ "id": "ern6", "title": "More Ready To Give", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/More_Ready_to_Give.mp3" },
+{ "id": "ern7", "title": "Picture and a Prayer", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Picture_and_a_Prayer.mp3" },
+{ "id": "ern8", "title": "Psalm 108 and 103", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Psalm_108_and_103.mp3" },
+{ "id": "ern9", "title": "Say the Word", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Say_the_Word.mp3" },
+{ "id": "ern10", "title": "Seek Him", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Seek_Him.mp3" },
+{ "id": "ern11", "title": "Seek Long Give", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Seek_Long_Give.mp3" },
+{ "id": "ern12", "title": "Take Me", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Take_Me.mp3" },
+{ "id": "ern13", "title": "To Give You Glory", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/To_Give_You_Glory.mp3" },
+{ "id": "ern14", "title": "Touch of Faith", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Touch_of_Faith.mp3" },
+{ "id": "ern15", "title": "Trust in You - Psalm 143:8", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Trust_in_You_Psalm_143_8.mp3" },
+{ "id": "ern16", "title": "Veil of Grace", "meta": "Reed Nelson", "genre": "e-rn", "url": "https://archive.org/download/reed-nelson/Veil_of_Grace.mp3" },
+{ "id": "ern17", "title": "Download Songs from firefighters.org", "meta": "", "genre": "e-rn", "url": "", "isCredit": true },
+
 { "id": "eto1", "title": "Crying Out to You", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - Crying Out To You (320K) (1).mp3" },
 { "id": "eto2", "title": "Glorious God", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - Glorious God (320K).mp3" },
 { "id": "eto3", "title": "One Day", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - One Day (320K).mp3" },
