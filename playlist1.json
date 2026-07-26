@@ -7,6 +7,7 @@
 { "id": "eto5", "title": "With The Morning Dawn", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - With The Morning's Dawn (320K).mp3" },
 { "id": "eto6", "title": "You are with Me", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - You Are With Me (320K).mp3" },
 { "id": "eto7", "title": "You Shine", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - You Shine (320K).mp3" },
+{ "id": "eto8", "title": "Download Songs from http://tinaosborn.com", "meta": "", "genre": "e-to", "url": "", "isCredit": true },	
 	
   { "id": "e21", "title": "Agape", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/Agape.mp3" },
   { "id": "e22", "title": "Amazing Grace", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/Amazing_Grace.mp3" },
@@ -85,6 +86,7 @@
   { "id": "e275", "title": "west or east", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/west_or_east.mp3" },
   { "id": "e276", "title": "who do you love", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/who_do_you_love.mp3" },
   { "id": "e277", "title": "youre my deliverer", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/youre_my_deliverer.mp3" },
+{ "id": "e278", "title": "Download songs from FIREFIGHTERS.ORG", "meta": "", "genre": "e-stgd", "url": "", "isCredit": true },	
 
 { "id": "e11", "title": "Faithful and True", "meta": "Calvary Chapel Saving Grace", "genre": "e-ccsg1", "url": "https://archive.org/download/mjosephnj_gmail_0112/Worship%201/01-01.mp3" },
 { "id": "e12", "title": "Psalm 8", "meta": "Calvary Chapel Saving Grace", "genre": "e-ccsg1", "url": "https://archive.org/download/mjosephnj_gmail_0112/Worship%201/01-02.mp3" },
