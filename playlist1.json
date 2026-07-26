@@ -1,5 +1,19 @@
 [
 
+{ "id": "emp1", "title": "Within Reach", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado01.mp3" },
+{ "id": "emp2", "title": "Great Hunger", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado02.mp3" },
+{ "id": "emp3", "title": "White Lies", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado03.mp3" },
+{ "id": "emp4", "title": "Sugar Coated Reality", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado04.mp3" },
+{ "id": "emp5", "title": "Song in the Night", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado05.mp3" },
+{ "id": "emp6", "title": "Where will you Go", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado06.mp3" },
+{ "id": "emp7", "title": "I Would Rather", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado07.mp3" },
+{ "id": "emp8", "title": "Hold On You", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado08.mp3" },
+{ "id": "emp9", "title": "Basics of Life", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado09.mp3" },
+{ "id": "emp10", "title": "Agree to Disagree", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado10.mp3" },
+{ "id": "emp11", "title": "Broken Down in Morgan Town", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado11.mp3" },
+{ "id": "emp12", "title": "Message From Michael", "meta": "Reed Nelson", "genre": "e-mp", "url": "https://archive.org/download/michael-preciado/Preciado12.mp3" },
+{ "id": "emp13", "title": "Download Songs from firefighters.org", "meta": "", "genre": "e-mp", "url": "", "isCredit": true },		
+	
 { "id": "eccm1", "title": "Great Humble King", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/01_Great_Humble_King.mp3" },
 { "id": "eccm2", "title": "Love That is Greater", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/02_Love_That_Is_Greater.mp3" },
 { "id": "eccm3", "title": "Amazing Love", "meta": "Reed Nelson", "genre": "e-ccm", "url": "https://archive.org/download/calvary-chapel-music/03_Amazing_Love.mp3" },
