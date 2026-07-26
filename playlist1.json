@@ -1,5 +1,13 @@
 [
 
+{ "id": "eto1", "title": "Crying Out to You", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - Crying Out To You (320K) (1).mp3" },
+{ "id": "eto2", "title": "Glorious God", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - Glorious God (320K).mp3" },
+{ "id": "eto3", "title": "One Day", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - One Day (320K).mp3" },
+{ "id": "eto4", "title": "There is No Other Name", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - There Is No Other Name (320K).mp3" },
+{ "id": "eto5", "title": "With The Morning Dawn", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - With The Morning's Dawn (320K).mp3" },
+{ "id": "eto6", "title": "You are with Me", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - You Are With Me (320K).mp3" },
+{ "id": "eto7", "title": "You Shine", "meta": "Tina Osborn", "genre": "e-to", "url": "https://archive.org/download/tina-osborn/Tina Osborn - You Shine (320K).mp3" },
+	
   { "id": "e21", "title": "Agape", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/Agape.mp3" },
   { "id": "e22", "title": "Amazing Grace", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/Amazing_Grace.mp3" },
   { "id": "e23", "title": "Arms of Love", "meta": "Steve Gooden", "genre": "e-stgd", "url": "https://archive.org/download/Steve-Gooden/Arms_of_Love.mp3" },
