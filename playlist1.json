@@ -1,5 +1,16 @@
 [
 
+{ "id": "etng1", "title": "Adopted", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Adopted.mp3" },
+{ "id": "etng2", "title": "Dance With You", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Dance With You.mp3" },
+{ "id": "etng3", "title": "Forever", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Forever.mp3" },
+{ "id": "etng4", "title": "Harmony", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Harmony.mp3" },
+{ "id": "etng5", "title": "He Didn't Die In Vain", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/He Didn't Die In Vain.mp3" },
+{ "id": "etng6", "title": "I-Run-To-You", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/I-Run-To-You.mp3" },
+{ "id": "etng7", "title": "Jesus-is-the-World", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Jesus-is-the-World.mp3" },
+{ "id": "etng8", "title": "Open-The-Door", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Open-The-Door.mp3" },
+{ "id": "etng9", "title": "Unwind", "meta": "Take No Glory", "genre": "e-tng", "url": "https://archive.org/download/take-no-glory/Unwind.mp3" },
+{ "id": "etng10", "title": "Download Songs from firefighters.org", "meta": "", "genre": "e-tng", "url": "", "isCredit": true },	
+
 { "id": "emjm1", "title": "All Who Are Thirsty", "meta": "Megan Jean", "genre": "e-mjm", "url": "https://archive.org/download/Megan-Jean/All_Who_Are_Thirsty.mp3" },
 { "id": "emjm2", "title": "Within Reach", "meta": "Megan Jean", "genre": "e-mjm", "url": "https://archive.org/download/Megan-Jean/Isaiah_61.mp3" },
 { "id": "emjm3", "title": "Breathe", "meta": "Megan Jean", "genre": "e-mjm", "url": "https://archive.org/download/Megan-Jean/Breathe.mp3" },
