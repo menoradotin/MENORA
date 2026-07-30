@@ -1,5 +1,22 @@
 [
 
+{ "id": "tvi1", "title": "Aelai Enthan", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Aavaludan-Naan.mp3" },
+{ "id": "tvi2", "title": "Adaikalam Tharukindra", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Adaikalam-Tharukindra.mp3" },
+{ "id": "tvi3", "title": "Aelai Enthan", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Aelai-Enthan.mp3" },
+{ "id": "tvi4", "title": "Agavirunthaga En Iraiva", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Agavirunthaga-En-Iraiva.mp3" },
+{ "id": "tvi5", "title": "Anbane Viraivilva", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Anbane-Viraivilva.mp3" },
+{ "id": "tvi6", "title": "Andavarin Thiruchanithiyil", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Andavarin-thiruchanithiyil.mp3" },
+{ "id": "tvi7", "title": "Appapthil Vazhum", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Appapthil-Vazhum.mp3" },
+{ "id": "tvi8", "title": "En Aesuvae", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/En-Aesuvae.mp3" },
+{ "id": "tvi9", "title": "Enthan Aesu", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Enthan-Aesu.mp3" },
+{ "id": "tvi10", "title": "Iriavan Entrendrum", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Iriavan-Entrendrum.mp3" },
+{ "id": "tvi11", "title": "Kannil Puthiyavanam", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Kannil-Puthiyavanam.mp3" },
+{ "id": "tvi12", "title": "Karthar En Meetparae", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Karthar-En-Meetparae.mp3" },
+{ "id": "tvi13", "title": "Ummai Valthuvom", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Ummai-Valthuvom.mp3" },
+{ "id": "tvi14", "title": "Vanin Amuthae Va", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Vanin-Amuthae-Va.mp3" },
+{ "id": "tvi15", "title": "Vazhum Iraivanai", "meta": "bibleintamil.com", "genre": "t-vi", "url": "https://archive.org/download/vazhum-iraivan/Vazhum-Iraivanai.mp3" },
+{ "id": "tvi16", "title": "bibleintamil.com", "meta": "", "genre": "t-vi", "url": "", "isCredit": true },	
+
 { "id": "tys1", "title": "Aelai Enthan", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Aelai-enthan.mp3" },
 { "id": "tys2", "title": "Anbanae Viraivil", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Anbane-Virivil.mp3" },
 { "id": "tys3", "title": "Anbenum Veenaiyilae", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Anbenum-Veenaiyilae.mp3" },
