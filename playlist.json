@@ -1,4 +1,17 @@
 [
+
+{ "id": "tys1", "title": "Aelai Enthan", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Aelai-enthan.mp3" },
+{ "id": "tys2", "title": "Anbanae Viraivil", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Anbane-Virivil.mp3" },
+{ "id": "tys3", "title": "Anbenum Veenaiyilae", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Anbenum-Veenaiyilae.mp3" },
+{ "id": "tys4", "title": "Anbin-Deva", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Anbin-Deva.mp3" },
+{ "id": "tys5", "title": "En Devane", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/En-Devane.mp3" },
+{ "id": "tys6", "title": "Oliyam Eraiye", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Oliyam-Eraiye.mp3" },
+{ "id": "tys7", "title": "Semmariyin Virundhuku", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Semmariyin-Virundhuku.mp3" },
+{ "id": "tys8", "title": "Valvai Alikkum", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Valvai-Alikkum.mp3" },
+{ "id": "tys9", "title": "Valvil Inimai", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Valvil-Inimai.mp3" },
+{ "id": "tys10", "title": "Yaridam Selvom", "meta": "bibleintamil.com", "genre": "t-ys", "url": "https://archive.org/download/Yaridam-Selvom/Yaridam-Selvom.mp3" },
+{ "id": "tys11", "title": "bibleintamil.com", "meta": "", "genre": "t-ys", "url": "", "isCredit": true },
+	
   { "id": "tocsm1", "title": "Bethalayil Piranthavarai Potri Thuthi", "meta": "bibleintamil.com", "genre": "t-ocs3", "url": "https://archive.org/download/Tamil-Old-CSI-Songs-Part3/Bethalayil-Piranthavarai-Potri-Thuthi.mp3" },
   { "id": "tocsm2", "title": "Aethaenil Aathimanam", "meta": "bibleintamil.com", "genre": "t-ocs3", "url": "https://archive.org/download/old-csi-songs-p2/Bethalayin-Sathirathai-Nadinar-Aelai-Mathu.mp3" },
   { "id": "tocsm3", "title": "Aethaenil Aathimanam", "meta": "bibleintamil.com", "genre": "t-ocs3", "url": "https://archive.org/download/old-csi-songs-p2/Maarida-En-Ma-Naesarae.mp3" },
