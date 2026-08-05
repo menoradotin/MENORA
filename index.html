@@ -200,7 +200,7 @@
     #menoraAudioScope .lang-toggle button[aria-pressed="true"] { background: #00643C !important; color: #FFFFFF !important; border: 1px solid #000000 !important; }
     #menoraAudioScope .lang-toggle button[aria-pressed="false"] { background: #FFFFFF !important; color: #00643C !important; border: 1px solid #00643C !important; }
     
-    #menoraAudioScope .menora-filter-heading { margin: 0 0 2px 0 !important; padding: 0 !important; font-size: 11px !important; font-weight: 800 !important; color: #468062 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; }
+    #menoraAudioScope .menora-filter-heading { margin: 0 0 2px 0 !important; padding: 0 !important; font-size: 12px !important; font-weight: 800 !important; color: #468062 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; }
     #menoraAudioScope .menora-custom-select { width: 100% !important; padding: 6px 10px !important; border-radius: 2px !important; border: 1.5px solid #468062 !important; background: #041321 !important; font-size: 13px !important; font-family: 'Trebuchet MS', sans-serif !important; color: #FFFDF4 !important; outline: none !important; cursor: pointer !important; font-weight: bold !important; }
     #menoraAudioScope .menora-playlist-select-btn { display: flex !important; align-items: center !important; justify-content: space-between !important; text-align: left !important; }
     #menoraAudioScope .menora-select-caret { font-size: 26px !important; opacity: 0.85 !important; margin-left: 8px !important; flex-shrink: 0 !important; }
@@ -778,7 +778,7 @@
             const hasChildren = !!playlist.children;
             const isActive = !hasChildren && playlist.value === self.selectedPlaylist;
             const row = document.createElement('div');
-            row.style.cssText = "padding: 5px 8px; border-bottom: 1px solid rgba(255, 253, 244, 0.1); cursor: pointer; transition: all 0.2s; font-family: 'Trebuchet MS', Arial; font-size: 14px; font-weight: bold; display:flex; align-items:center; justify-content:space-between; " + (isActive ? "background: rgba(70, 128, 98, 0.3); color: #FFFACD;" : "color: #FFFDF4;");
+            row.style.cssText = "padding: 6px 10px; border-bottom: 3px solid rgba(255, 253, 244, 0.1); cursor: pointer; transition: all 0.2s; font-family: 'Trebuchet MS', Arial; font-size: 14px; font-weight: bold; display:flex; align-items:center; justify-content:space-between; " + (isActive ? "background: rgba(70, 128, 98, 0.3); color: #FFFACD;" : "color: #FFFDF4;");
 
             row.innerHTML = "<span>" + playlist.label + "</span>" + (hasChildren ? "<span style='opacity:0.7; font-size:26px;'>&#9656;</span>" : "");
 
