@@ -1,4 +1,4 @@
-[
+1[
 { "id": "vavl", "title": "VIEW LYRICS", "meta": "", "genre": "ia-va", "url": "", "isCredit": true, "openLyrics": true },	
 { "id": "va1", "title": "Aalayam Irai Aalayam", "meta": "bibleintamil.com", "genre": "ia-va", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/ia-varugai2/Aalayam-Irai-Aalayam.mp3" },
 { "id": "va2", "title": "Aanandam Pongida Athisayam", "meta": "bibleintamil.com", "genre": "ia-va", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/ia-varugai2/Aanandam-Pongida-Athisayam.mp3" },
@@ -739,7 +739,7 @@
   { "id": "tum2", "title": "Iraiva Umakku", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5002iraiva-umakku.mp3" },
   { "id": "tum3", "title": "En Iraivaa", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5003en-iraiva.mp3" },
   { "id": "tum4", "title": "Umathu Arulayum", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5004umathu-arulayum.mp3" },
-  { "id": "tum5", "title": "Aandavarae En", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5005andavare-en.mp3" },
+  { "id": "tum5", "title": "Aandavarae En Pugalidam", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5005andavare-en.mp3" },
   { "id": "tum6", "title": "Aandavare", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5006andavare.mp3" },
   { "id": "tum7", "title": "Umathu Vallamai", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5007umathu-vallamai.mp3" },
   { "id": "tum8", "title": "Kodaikalin", "meta": "Internet Archive", "genre": "t-um", "url": "https://archive.org/download/umakku-mattum/5008kodaikalin.mp3" },
@@ -1485,7 +1485,7 @@
 	{ "id": "tvartk1", "title": "Thanks to BIBLEINTAMIL.COM", "meta": "", "genre": "t-ia-varugai1", "url": "", "isCredit": true },	
 	
 	{ "id": "t501", "title": "Aadhavan Uthikkum", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Aadhavan-Uthikkum.mp3" },
-  { "id": "t502", "title": "Aandavarae Ennai", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Aandavare-Ennai.mp3" },
+  { "id": "t502", "title": "Aandavarae Ennai Arinthiruntheer", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Aandavare-Ennai.mp3" },
   { "id": "t503", "title": "Aandavare Neere Ennai", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Aandavare-neere-ennai.mp3" },
   { "id": "t504", "title": "Adhi Pethavum", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Adhipethavum.mp3" },
   { "id": "t505", "title": "Aesu Enthan Meetpare En Aathma Nesare", "meta": "bibleintamil.com", "genre": "t-rcold1", "url": "https://pub-bca80e8b292e4768946e3c138d56258d.r2.dev/rc-old/Aesu-enthan-meetpare-en-aathma-nesare.mp3" },
